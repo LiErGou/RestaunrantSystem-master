@@ -1,0 +1,42 @@
+Chicken Dish,13.0,This is really good. Chicken dish!,2
+Chicken,Egg,
+500,500,
+Chicken 1,15.0,This is chicken 1. This is tasty.,3
+Chicken,
+500,
+Chicken 2,18.0,This is chicken 1. This is tasty.,2
+Chicken,Potato,Tomato,
+300,250,500,
+Pork 1,14.0,This is pork 1. This is tasty.,2
+Pork,Carrot,Cabbage,
+450,360,200,
+Pork 2,23.0,This is pork 2. this is good.,1
+Pork,GreenPepper,
+1000,400,
+Fish1,18.0,This is good!!!try the fish 1!,2
+Fish,Cabbage,
+600,430,
+Fish2,19.0,This is fish 2!good!!!!!we all like fish 2,2
+Fish,Cucumber,Onion,
+500,500,300,
+Beef1,19.0,This is beef! real beef in the world!.,2
+Beef,Potato,Tomato,
+350,300,200,
+Shrimp1,22.0,This is Shrimp 1! lots of shrimps!.,2
+Shrimp,Onion,GreenPepper,
+400,100,150,
+Shrimp 2,15.0,Fried Shrimp! good!,2
+Shrimp,Potato,
+400,220,
+Vagetables Dish,10.0,All vagetables. Good . Health,2
+Tomato,Carrot,GreenPepper,Olive,Tofu,
+300,222,400,140,230,
+Pork and Fish,23.0,This is pork and fish,3
+Pork,Fish,Egg,
+400,300,200,
+test,40.0,aaaaa,1
+Pork,Tomato,
+100,100,
+testdish,40.0,tttt,1
+Chicken,Potato,
+300,350,
