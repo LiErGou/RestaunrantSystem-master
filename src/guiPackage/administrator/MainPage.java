@@ -51,7 +51,7 @@ public class MainPage extends javax.swing.JFrame {
         });
 
 //        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton2.setText("管理菜单");
+        jButton2.setText("增加菜品");
         jButton2.setToolTipText("");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +60,7 @@ public class MainPage extends javax.swing.JFrame {
         });
 
 //        jButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton3.setText("管理食材");
+        jButton3.setText("销售统计");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -68,7 +68,7 @@ public class MainPage extends javax.swing.JFrame {
         });
 
 //        jButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton4.setText("点餐历史");
+        jButton4.setText("菜品浏览");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -148,9 +148,10 @@ public class MainPage extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-         ViewOrderHistory adminPage = new ViewOrderHistory();
-        adminPage.setVisible(true);
-        adminPage.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    	new test2();
+//         ViewOrderHistory adminPage = new ViewOrderHistory();
+//        adminPage.setVisible(true);
+//        adminPage.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed

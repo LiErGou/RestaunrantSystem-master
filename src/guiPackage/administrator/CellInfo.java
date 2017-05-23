@@ -18,8 +18,9 @@ public class CellInfo {
         this.iconName=nm;
         this.bgColor = bgColor;
     }
-    public CellInfo(String svgPath,String iconName){
+    public CellInfo(String svgPath,String iconName,int id){
     	this.svgPath=svgPath;
     	this.iconName=iconName;
+    	this.id=id;
     }
 }

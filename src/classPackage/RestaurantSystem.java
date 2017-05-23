@@ -277,10 +277,10 @@ public class RestaurantSystem implements Serializable {
 		System.out.println("inventoryRecord is added into customerList");
 	}
 
-	public static User searchCustomer(int id) {
+	public static User searchCustomer(String id) {
 		// 查询SQL语句
 		String sqlGuest = " select id,account,password,name,permission,remark "
-				+ " from guesttbl " + " where id=?";
+				+ " from guesttbl " + " where name=?";
 		// 数据库连接工具类
 		guiPackage.DBUtil util = new guiPackage.DBUtil();
 		// 获得连接
@@ -292,12 +292,13 @@ public class RestaurantSystem implements Serializable {
 			pstmt = conn.prepareStatement(sqlGuest);
 
 			// 设置查询参数
-			pstmt.setInt(1, id);
+			pstmt.setString(1, id);
 			// 执行查询
 			ResultSet rs = pstmt.executeQuery();
 			// 判断用户是否存在
 			if (rs.next()) {
 				// 获得用户信息
+				int no=rs.getInt(1);
 				String account=rs.getString(2);
 				String password=rs.getString(3);
 				String name = rs.getString(4);
@@ -306,7 +307,7 @@ public class RestaurantSystem implements Serializable {
 				// 封装用户信息
 				User u = new User();
 				System.out.println("u id is:"+id);
-				u.setId(id);
+				u.setId(no);
 				u.setAccount(account);
 				u.setPassword(password);
 				u.setName(name);

@@ -116,31 +116,28 @@ public class LoginGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        String name = jTextField1.getText(); 
-        String password = jTextField2.getText();
+	private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
+		// TODO add your handling code here:
+		String name = jTextField1.getText();
+		String password = jTextField2.getText();
 
-     if(checkAdminStatus(name, password)){
-        System.out.println("log in as administrator");
-        MainPage adminPage = new MainPage();
-        adminPage.setVisible(true);
-        adminPage.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        dispose();
-     }else if(checkCustomerStatus(name, password)){
-        System.out.println("log in as customer");
-        CustomerMainPageGUI adminPage = new CustomerMainPageGUI();
-        adminPage.setVisible(true);
-        adminPage.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        dispose();
-     }
-     else{
-         JOptionPane.showMessageDialog(null, "Wrong Input.");
-     }
-     
-     
-       
-    }//GEN-LAST:event_jButton1ActionPerformed
+		if (checkAdminStatus(name, password)) {
+			System.out.println("log in as administrator");
+			MainPage adminPage = new MainPage();
+			adminPage.setVisible(true);
+			adminPage.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+			dispose();
+		} else if (checkCustomerStatus(name, password)) {
+			System.out.println("log in as customer");
+			CustomerMainPageGUI adminPage = new CustomerMainPageGUI();
+			adminPage.setVisible(true);
+			adminPage.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+			dispose();
+		} else {
+			JOptionPane.showMessageDialog(null, "Wrong Input.");
+		}
+
+	}//GEN-LAST:event_jButton1ActionPerformed
 
 	private boolean checkAdminStatus(String name, String password){
        

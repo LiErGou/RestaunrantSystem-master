@@ -48,7 +48,7 @@ public class ModifyCustomer extends javax.swing.JFrame {
 //        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("用户管理");
 
-        jButton2.setText("搜索ID");
+        jButton2.setText("搜索用户名");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -107,7 +107,7 @@ public class ModifyCustomer extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        int id = Integer.parseInt(jTextField1.getText());
+        String id = jTextField1.getText();
         User c = RestaurantSystem.searchCustomer(id);
         if(c!=null){
         ChangeCustomerInfo adminPage = new ChangeCustomerInfo();
