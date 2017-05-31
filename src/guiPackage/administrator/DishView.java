@@ -7,6 +7,7 @@ import java.awt.*;
 
 import java.awt.Container;
 import java.awt.event.*;
+
 import javax.swing.*;
 
 import java.sql.Connection;
@@ -18,14 +19,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
-public class test2 {
-	JButton bt = new JButton();
-
-	public test2() {
+public class DishView {
+	JButton deleteBt = new JButton();
+	JButton addBt = new JButton();
+	
+	public DishView() {
 		String[] s = { "", "", "", "", "" };
 		int width = 400;
 		int height = 300;
-		JFrame f = new JFrame("菜品清单");
+		final JFrame f = new JFrame("菜品清单");
 		JPanel p = new JPanel();
 		Container contentPane = f.getContentPane();
 		JList list1 = new JList(s);
@@ -36,15 +38,25 @@ public class test2 {
 		 */
 		final CellRenderer cr = new CellRenderer();
 		list1.setCellRenderer(cr);
-		bt.setText("删除菜品");
-		bt.setSize(50, 20);
-		p.add(bt);
+		deleteBt.setText("删除菜品");
+		deleteBt.setSize(50, 20);
+		addBt.setText("增加菜品");
+		addBt.setSize(50, 20);
+		p.add(deleteBt);
+		p.add(addBt);
 		contentPane.add(new JScrollPane(list1));
 		contentPane.add(p, BorderLayout.SOUTH);
-		bt.addActionListener(new java.awt.event.ActionListener() {
+		deleteBt.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				jButton1ActionPerformed(evt, cr);
 			}
+		});
+		addBt.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				jButton2ActionPerformed(evt);
+			}
+
+			
 		});
 
 		List<DishMenu> dishList = getMenuList();
@@ -64,11 +76,16 @@ public class test2 {
 		f.show();
 		f.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
-				System.exit(0);
+				f.setVisible(false);
 			}
 		});
 	}
-
+	private void jButton2ActionPerformed(ActionEvent evt) {
+		  ModifyFoodItem adminPage = new ModifyFoodItem();
+	        adminPage.setVisible(true);
+	        
+		
+	}
 	private void jButton1ActionPerformed(java.awt.event.ActionEvent evt,
 			CellRenderer cr) {// GEN-FIRST:event_jButton1ActionPerformed
 		// TODO add your handling code here:
@@ -176,7 +193,7 @@ public class test2 {
 	}
 
 	public static void main(String args[]) {
-		new test2();
+		new DishView();
 	}
 
 }

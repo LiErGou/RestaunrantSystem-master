@@ -148,7 +148,7 @@ public class MainPage extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-    	new test2();
+    	new DishView();
 //         ViewOrderHistory adminPage = new ViewOrderHistory();
 //        adminPage.setVisible(true);
 //        adminPage.setDefaultCloseOperation(DISPOSE_ON_CLOSE);

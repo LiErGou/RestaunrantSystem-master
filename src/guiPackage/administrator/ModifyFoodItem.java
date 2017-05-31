@@ -88,6 +88,10 @@ public class ModifyFoodItem extends javax.swing.JFrame {
 		jLabel10 = new javax.swing.JLabel();
 		jRadioButton1.setVisible(false);
 		jRadioButton2.setVisible(false);
+		jTextArea1.setVisible(false);
+		jScrollPane1.setVisible(false);
+		jScrollPane2.setVisible(false);
+		
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
 		// jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -498,13 +502,12 @@ public class ModifyFoodItem extends javax.swing.JFrame {
 
 	private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton3ActionPerformed
 		// TODO add your handling code here:
-		if ((jList1.isSelectionEmpty() == false)
-				&& (jTextField5.getText().getBytes().length > 0)) {
+		if ((jTextField5.getText().getBytes().length > 0)) {
 			String imageSourcePath = jTextField5.getText();
 			imageSourcePath.replace("\\", "/");
 			String toPath=getTopath();
-			iList.add(RestaurantSystem.getIngredientList().get(
-					jList1.getSelectedIndex()));
+//			iList.add(RestaurantSystem.getIngredientList().get(
+//					jList1.getSelectedIndex()));
 			wList.add(2);
 			copyToOtherPath(imageSourcePath, toPath);
 //			text += iList.get(iList.size() - 1).getName() + " "
@@ -595,7 +598,7 @@ public class ModifyFoodItem extends javax.swing.JFrame {
 					System.out.print(i + dish.getIngredientNames()[i] + "  "
 							+ dish.getCalories());
 				}
-				JOptionPane.showMessageDialog(null, "Add successfully");
+				JOptionPane.showMessageDialog(null, "添加菜品成功");
 				dispose();
 			} else {
 				JOptionPane.showMessageDialog(null, "Complete input");
