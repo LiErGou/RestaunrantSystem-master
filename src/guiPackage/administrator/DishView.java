@@ -143,7 +143,7 @@ public class DishView {
 			// 判断用户是否存在
 			if (rs.next()) {
 				// 获得用户信息
-				String topath = rs.getString(1);
+				String topath = rs.getString(1)+"\\WebRoot\\WEB-INF\\classes\\image";
 				// 封装用户信息
 				return topath;
 			}

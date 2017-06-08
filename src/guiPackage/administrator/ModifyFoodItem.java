@@ -566,7 +566,8 @@ public class ModifyFoodItem extends javax.swing.JFrame {
 			// 判断用户是否存在
 			if (rs.next()) {
 				// 获得用户信息
-				String topath = rs.getString(1);
+//		E:\学习\毕设\WirelessOrder_Server - 4.5\WebRoot\WEB-INF\classes\image		
+				String topath = rs.getString(1)+"\\WebRoot\\WEB-INF\\classes\\image";
 				// 封装用户信息
 				return topath;
 			}

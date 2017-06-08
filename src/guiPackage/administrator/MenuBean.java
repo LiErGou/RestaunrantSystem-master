@@ -1,6 +1,6 @@
 package guiPackage.administrator;
 
-public class paixubean {
+public class MenuBean {
 private String menuname;
 private int price;
 public void setname(String menuname)
